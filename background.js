@@ -11,7 +11,7 @@ const endpoint = "https://www.googleapis.com/youtube/v3/videos";
 // 
 // It cannot be used to access user data. Google just uses it for rate limiting.
 
-const key = "AIzaSyCaHWZYPuLv4cD6k-TQjg4Jx_1GQnG1wFw"; 
+const key = "API_KEY_HERE"; 
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
