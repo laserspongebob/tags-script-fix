@@ -52,8 +52,8 @@ const hasNavigated = () => state.lastVideoId != getVideoId();
  var gresponse;
 const fetchTags = id => {
     chrome.runtime.sendMessage({contentScriptQuery: "queryId", sendId: id}, function(response){
-		addTagsToDom(response);
-	});
+        addTagsToDom(response);
+    });
 }
 
 /**
