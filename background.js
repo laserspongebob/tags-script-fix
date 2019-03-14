@@ -16,11 +16,11 @@ const key = "AIzaSyCaHWZYPuLv4cD6k-TQjg4Jx_1GQnG1wFw";
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.contentScriptQuery == "queryId") {
-		fetch(endpoint+'?part=snippet&fields=items(snippet(tags))&id='+encodeURIComponent(request.sendId)+'&key='+key)
+        fetch(endpoint+'?part=snippet&fields=items(snippet(tags))&id='+encodeURIComponent(request.sendId)+'&key='+key)
           .then(r => r.json())
           .then(r => (r.items[0] && r.items[0].snippet.tags) || [])
-		  .then(r => sendResponse(r));
-		return true;
+          .then(r => sendResponse(r));
+        return true;
     }
   }
 );
